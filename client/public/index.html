@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="An AI-powered speech therapy platform for individuals seeking to improve their fluency and communication skills." 
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <meta property="og:title" content="Speak with Confidence" /> 
+    <meta property="og:description" content="Personalized teletherapy and educational experiences for speech-language pathologists and those seeking to improve their communication." />
+    <meta property="og:image" content="%PUBLIC_URL%/social-share.jpg" />
+    <meta property="og:url" content="https://www.example.com" /> 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@YourAppTwitter" /> 
+    <meta name="twitter:creator" content="@YourAppTwitter" /> 
+
+    <link rel="preload" href="%PUBLIC_URL%/fonts/roboto-v30-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="%PUBLIC_URL%/fonts/roboto-v30-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+
+    <meta name="keywords" content="speech therapy, fluency, communication, AI, teletherapy, speech-language pathologist, confidence" /> 
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "YourAppName", 
+        "url": "https://www.example.com", 
+        "logo": "https://www.example.com/logo.png", 
+        "sameAs": [
+          "https://www.facebook.com/YourAppFacebook", 
+          "https://twitter.com/YourAppTwitter" 
+        ]
+      }
+    </script>
+
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-XXXXXXX'); 
+    </script>
+
+    <script defer data-domain="example.com" src="https://plausible.io/js/plausible.js"></script> 
+
+    <title>Speak with Confidence</title> 
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script>
+      // High contrast mode toggle
+      function toggleHighContrast() {
+        document.body.classList.toggle('high-contrast');
+      }
+    </script>
+    <button onclick="toggleHighContrast()">Toggle High Contrast</button>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./service-worker.js')
+            .then(registration => {
+              console.log('Service Worker registered:', registration);
+            })
+            .catch(error => {
+              console.error('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

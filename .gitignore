@@ -1,0 +1,132 @@
+# .gitignore - Ignore files and directories for StutterOn (replace with your app name)
+
+# General
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+*.bak
+*.orig
+*.rej
+*.patch
+*.diff
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn
+.cache
+.parcel-cache
+.next
+dist
+build
+out
+
+# Client (React)
+client/build/
+client/.next/
+client/coverage/
+
+# Server
+server/dist/
+server/build/
+server/coverage/
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.vscode/
+
+# Machine Learning
+*.h5
+*.pb
+*.ckpt
+*.tfrecord
+*.data-*
+*.index
+*.meta
+*.json
+tensorboard_logs/
+models/
+checkpoints/
+datasets/
+experiments/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+*.accdb
+*.sql
+*.dump
+*.backup
+dumps/
+backups/
+
+# IDE and Editor Files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.sln
+*.suo
+*.user
+*.userprefs
+*.sublime-project
+*.sublime-workspace
+
+# Operating System Files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Deployment
+.elasticbeanstalk/
+.ebextensions/
+.serverless/
+deploy/
+releases/
+
+# Secrets and Credentials
+.env
+.env.*
+*.pem
+*.key
+*.cert
+credentials.json
+config.json
+
+# Documentation
+docs/api/
+docs/build/
+
+# Miscellaneous
+uploads/
+downloads/
+tmp/
+temp/
+cache/
+logs/
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+
+
+
+
+
+

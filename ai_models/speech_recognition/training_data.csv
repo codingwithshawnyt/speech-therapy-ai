@@ -1,0 +1,42 @@
+# This is a simplified representation of how the training_data.csv might look
+
+# It's crucial to understand that this is NOT actual code, but a representation of data
+# The actual CSV would contain thousands or millions of rows with acoustic features
+
+# Columns:
+#   - timestamp: Timestamp of the audio frame
+#   - f0: Fundamental frequency (pitch)
+#   - f1, f2, f3: Formant frequencies
+#   - intensity: Intensity of the speech signal
+#   - jitter: Jitter (pitch perturbation)
+#   - shimmer: Shimmer (amplitude perturbation)
+#   - hnr: Harmonics-to-noise ratio
+#   - mfcc1, mfcc2, ..., mfcc13: Mel-frequency cepstral coefficients
+#   - fluency: Binary label (1 for fluent, 0 for disfluent)
+
+timestamp,f0,f1,f2,f3,intensity,jitter,shimmer,hnr,mfcc1,mfcc2,mfcc3,...,mfcc13,fluency
+2023-10-26T10:00:00.000Z,120.5,500.2,1500.8,2500.3,65.7,0.005,0.08,15.2,-200.3,50.1,20.5,...,10.8,1
+2023-10-26T10:00:00.010Z,122.1,510.5,1510.2,2515.6,66.3,0.004,0.07,15.5,-202.1,51.3,21.2,...,11.1,1
+2023-10-26T10:00:00.020Z,123.8,520.8,1520.5,2530.1,67.0,0.003,0.06,15.8,-203.9,52.5,21.9,...,11.4,1
+...
+2023-10-26T10:00:05.100Z,118.2,480.9,1480.3,2485.7,64.5,0.008,0.11,14.8,-198.5,48.9,19.8,...,10.5,0  # Example of a disfluent frame
+2023-10-26T10:00:05.110Z,119.7,490.1,1490.6,2490.2,65.1,0.007,0.10,15.1,-199.3,49.7,20.3,...,10.7,0
+...
+
+# This pattern would continue for millions of rows, capturing various speech patterns
+# with corresponding acoustic features and fluency labels.
+
+# Important considerations:
+
+# - Data volume: A large and diverse dataset is crucial for training a robust model.
+# - Data quality: The accuracy and consistency of the labels are essential.
+# - Feature engineering: Selecting and extracting relevant acoustic features is critical.
+# - Data augmentation: Techniques like adding noise or changing pitch can improve model generalization.
+# - Data balancing: Ensure a balanced representation of fluent and disfluent speech.
+
+
+
+
+
+
+

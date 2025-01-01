@@ -1,0 +1,215 @@
+/* 
+  Global CSS
+  This file contains advanced CSS techniques and best practices.
+*/
+
+:root {
+    /* Define CSS variables for colors, fonts, and spacing */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #ffc107;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #fd7e14;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --body-bg-color: #fff;
+    --text-color: #212529;
+  
+    --font-family-sans-serif: 'Roboto', sans-serif;
+    --font-size-base: 1rem;
+    --line-height-base: 1.5;
+  
+    --spacing-unit: 1rem;
+  }
+  
+  /* 
+    High Contrast Mode 
+    This section demonstrates how to implement a high-contrast theme using CSS variables and media queries.
+  */
+  
+  body.high-contrast {
+    --primary-color: #ffff00;
+    --secondary-color: #fff;
+    --accent-color: #000;
+    --success-color: #00ff00;
+    --danger-color: #ff0000;
+    --warning-color: #ffa500;
+    --info-color: #00ffff;
+    --light-color: #000;
+    --dark-color: #fff;
+    --body-bg-color: #000;
+    --text-color: #fff;
+  
+    /* Other high contrast styles */
+    * {
+      background-color: var(--body-bg-color) !important;
+      color: var(--text-color) !important;
+      border-color: var(--secondary-color) !important;
+      text-shadow: none !important;
+      box-shadow: none !important;
+    }
+  
+    a {
+      text-decoration: underline !important;
+    }
+  
+    img {
+      opacity: 0.8 !important;
+    }
+  }
+  
+  /* 
+    Responsive Typography 
+    This section uses fluid typography techniques to create a responsive design.
+  */
+  
+  html {
+    font-size: 16px; /* Base font size */
+  }
+  
+  body {
+    font-family: var(--font-family-sans-serif);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-color);
+    background-color: var(--body-bg-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: var(--spacing-unit);
+  }
+  
+  /* Fluid typography using clamp() */
+  h1 {
+    font-size: clamp(1.5rem, 3vw + 1rem, 3rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.25rem, 2.5vw + 0.875rem, 2.5rem);
+  }
+  
+  p {
+    margin-top: 0;
+    margin-bottom: var(--spacing-unit);
+  }
+  
+  /* 
+    Advanced Selectors and Layout 
+    This section demonstrates the use of advanced CSS selectors and layout techniques.
+  */
+  
+  /* Style the direct children of a specific element */
+  .container > * {
+    margin-bottom: var(--spacing-unit);
+  }
+  
+  /* Style every third element within a container */
+  .list-group > *:nth-child(3n) {
+    background-color: var(--light-color);
+  }
+  
+  /* Style links based on their href attribute */
+  a[href^="https://"] {
+    color: var(--info-color);
+  }
+  
+  /* Style elements based on their data attributes */
+  button[data-action="save"] {
+    background-color: var(--success-color);
+  }
+  
+  /* 
+    CSS Grid Layout 
+    This example shows a basic CSS Grid layout.
+  */
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: var(--spacing-unit);
+  }
+  
+  /* 
+    CSS Flexbox Layout 
+    This example shows a basic CSS Flexbox layout.
+  */
+  
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* 
+    Animations and Transitions 
+    This section demonstrates basic CSS animations and transitions.
+  */
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .hover-effect:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* 
+    Accessibility 
+    This section includes some basic accessibility considerations.
+  */
+  
+  /* Focus styles for keyboard navigation */
+  *:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+  
+  /* Skip link for screen readers */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 100;
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  /* 
+    Print Styles 
+    This section defines styles specifically for printing.
+  */
+  
+  @media print {
+    body {
+      background-color: #fff;
+      color: #000;
+    }
+  
+    /* Hide elements that shouldn't be printed */
+    .no-print {
+      display: none;
+    }
+  }

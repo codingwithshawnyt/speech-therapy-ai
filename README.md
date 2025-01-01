@@ -1,10 +1,10 @@
-# StutterOn: AI-Powered Speech Therapy Platform
+# AI-Powered Speech Therapy Platform
 
 [![Build Status](https://api.travis-ci.com/travis-ci/travis-web.svg?branch=master)](https://travis-ci.com/codingwithshawnyt/speech-therapy-ai)
 [![Coverage Status](https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_100.svg)](https://coveralls.io/github/your-username/stutteron?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-StutterOn is an innovative AI-powered web application designed to provide personalized and accessible speech therapy for individuals who stutter. It leverages cutting-edge technologies like natural language processing (NLP), machine learning (ML), and speech recognition to offer a comprehensive suite of tools and resources for improving fluency and communication skills.
+This is an innovative AI-powered web application designed to provide personalized and accessible speech therapy for individuals who stutter. It leverages cutting-edge technologies like natural language processing (NLP), machine learning (ML), and speech recognition to offer a comprehensive suite of tools and resources for improving fluency and communication skills.
 
 ## Key Features
 
